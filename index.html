@@ -362,12 +362,12 @@
       <a href="#contact" class="btn btn-light">Book your free call <span class="arr">→</span></a>
     </div>
     <div class="tiers reveal" data-d="1">
-      <div class="tier"><div class="nm">Individuals</div><div class="pr">£50</div><span class="un">from · 50 min</span></div>
-      <div class="tier"><div class="nm">Couples</div><div class="pr">£75</div><span class="un">from · 60 min</span></div>
-      <div class="tier"><div class="nm">Families</div><div class="pr">£80</div><span class="un">from · 60 min</span></div>
-      <div class="tier"><div class="nm">Children &amp; young people</div><div class="pr">£55</div><span class="un">from · 50 min</span></div>
+      <div class="tier"><div class="nm">Individuals</div><div class="pr">£80</div><span class="un">from · per hour</span></div>
+      <div class="tier"><div class="nm">Couples</div><div class="pr">£150</div><span class="un">from · per session</span></div>
+      <div class="tier"><div class="nm">Families</div><div class="pr">£200</div><span class="un">from · 3–4 people</span></div>
+      <div class="tier"><div class="nm">Children &amp; young people</div><div class="pr">£65</div><span class="un">from · per session</span></div>
     </div>
-    <p class="fineprint reveal">online UK-wide or in person · evenings &amp; weekends · no long-term commitment</p>
+    <p class="fineprint reveal">prices vary depending on your circumstances · online UK-wide or in person · evenings &amp; weekends</p>
   </div>
 </section>
 
@@ -396,7 +396,7 @@
     <div class="head reveal"><span class="cue">— let's begin</span><h2>Start the conversation</h2><p>Tell me a bit about what's going on, or just say hello. I usually reply the same working day.</p></div>
     <div class="c-grid">
       <div class="reveal" data-d="1">
-        <div class="cline"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m22 7-10 5L2 7"/></svg></div><div><b>Email</b><span>hello@supportiveguardians.co.uk</span></div></div>
+        <div class="cline"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m22 7-10 5L2 7"/></svg></div><div><b>Email</b><span>Saidaaden@supportiveguardians.com</span></div></div>
         <div class="cline"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Hours</b><span>Mon–Sat, including evenings</span></div></div>
         <div class="cline"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Where</b><span>Online UK-wide &amp; in-person locations</span></div></div>
         <div class="urgent"><b>In a crisis right now?</b><p>We're not an emergency service. Call <strong>999</strong> if you're in danger, or Samaritans free any time on <strong>116 123</strong>.</p></div>
@@ -460,10 +460,10 @@
   }else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));}
   document.querySelectorAll('.qa').forEach(d=>{d.querySelector('summary').addEventListener('click',(ev)=>{ev.preventDefault();const o=d.hasAttribute('open');document.querySelectorAll('.qa').forEach(x=>x.removeAttribute('open'));if(!o)d.setAttribute('open','');});});
   const whoData={
-    ind:{t:'Individuals',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1"/></svg>',lead:'One-to-one sessions that move at your pace, in a private space where you can speak openly about whatever is going on.',helps:['Stress &amp; anxiety','Low mood','Confidence','Life changes','Loneliness','Work pressure'],price:'from £50',unit:'50-minute session'},
-    cou:{t:'Couples',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 4a4 4 0 0 0-4 2.5A4 4 0 0 0 4.5 8c0 3 4 6 8 8.5"/><path d="M12.5 16.5C16.5 14 20.5 11 20.5 8a4 4 0 0 0-4-4"/></svg>',lead:'A calm, even-handed space where the two of you can talk openly and feel heard, with equal room for both.',helps:['Communication','Recurring arguments','Trust','Intimacy','Parenting as a team','Big life changes'],price:'from £75',unit:'60-minute session'},
-    fam:{t:'Families',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2 20v-1a6 6 0 0 1 12 0v1M14.5 20v-.5a4.5 4.5 0 0 1 7-3.7"/></svg>',lead:'A place for your family to talk honestly, understand each other a bit better, and ease the tension at home.',helps:['Tension at home','Conflict','Big changes','Parent–child bonds','Blended families','New routines'],price:'from £80',unit:'60-minute session'},
-    cyp:{t:'Children &amp; young people',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="3"/><path d="M7 21v-3a5 5 0 0 1 10 0v3M12 10v4M9.5 13h5"/></svg>',lead:'Gentle support at a pace that suits younger ones, with you kept involved as much as makes sense.',helps:['Worries &amp; anxiety','School stress','Friendships','Confidence','Big feelings','Family changes'],price:'from £55',unit:'50-minute session'}
+    ind:{t:'Individuals',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1"/></svg>',lead:'One-to-one sessions that move at your pace, in a private space where you can speak openly about whatever is going on.',helps:['Stress &amp; anxiety','Low mood','Confidence','Life changes','Loneliness','Work pressure'],price:'from £80',unit:'per hour'},
+    cou:{t:'Couples',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 4a4 4 0 0 0-4 2.5A4 4 0 0 0 4.5 8c0 3 4 6 8 8.5"/><path d="M12.5 16.5C16.5 14 20.5 11 20.5 8a4 4 0 0 0-4-4"/></svg>',lead:'A calm, even-handed space where the two of you can talk openly and feel heard, with equal room for both.',helps:['Communication','Recurring arguments','Trust','Intimacy','Parenting as a team','Big life changes'],price:'from £150',unit:'per session'},
+    fam:{t:'Families',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2 20v-1a6 6 0 0 1 12 0v1M14.5 20v-.5a4.5 4.5 0 0 1 7-3.7"/></svg>',lead:'A place for your family to talk honestly, understand each other a bit better, and ease the tension at home.',helps:['Tension at home','Conflict','Big changes','Parent–child bonds','Blended families','New routines'],price:'from £200',unit:'per session (3–4 people)'},
+    cyp:{t:'Children &amp; young people',ic:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="3"/><path d="M7 21v-3a5 5 0 0 1 10 0v3M12 10v4M9.5 13h5"/></svg>',lead:'Gentle support at a pace that suits younger ones, with you kept involved as much as makes sense.',helps:['Worries &amp; anxiety','School stress','Friendships','Confidence','Big feelings','Family changes'],price:'from £65',unit:'per session'}
   };
   const wm=document.getElementById('whoModal');
   function openWho(k){const d=whoData[k];if(!d)return;document.getElementById('wmIc').innerHTML=d.ic;document.getElementById('wmTitle').innerHTML=d.t;document.getElementById('wmLead').innerHTML=d.lead;document.getElementById('wmList').innerHTML=d.helps.map(h=>'<li>'+h+'</li>').join('');document.getElementById('wmPrice').innerHTML=d.price+' <small>'+d.unit+'</small>';wm.classList.add('open');document.body.style.overflow='hidden';}
@@ -473,7 +473,7 @@
   document.getElementById('wmBook').addEventListener('click',closeWho);
   addEventListener('keydown',e=>{if(e.key==='Escape')closeWho();});
 
-  function sendForm(e){e.preventDefault();const v=id=>document.getElementById(id).value.trim();const s=encodeURIComponent('New enquiry from '+v('fn')+' '+v('ln'));const b=encodeURIComponent('Name: '+v('fn')+' '+v('ln')+'\nEmail: '+v('em')+'\nPhone: '+(v('ph')||'-')+'\n\n'+v('msg'));document.getElementById('sent').style.display='block';window.location.href='mailto:hello@supportiveguardians.co.uk?subject='+s+'&body='+b;return false;}
+  function sendForm(e){e.preventDefault();const v=id=>document.getElementById(id).value.trim();const s=encodeURIComponent('New enquiry from '+v('fn')+' '+v('ln'));const b=encodeURIComponent('Name: '+v('fn')+' '+v('ln')+'\nEmail: '+v('em')+'\nPhone: '+(v('ph')||'-')+'\n\n'+v('msg'));document.getElementById('sent').style.display='block';window.location.href='mailto:Saidaaden@supportiveguardians.com?subject='+s+'&body='+b;return false;}
 </script>
 </body>
 </html>
