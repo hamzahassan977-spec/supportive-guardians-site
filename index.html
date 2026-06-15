@@ -473,7 +473,7 @@
   document.getElementById('wmBook').addEventListener('click',closeWho);
   addEventListener('keydown',e=>{if(e.key==='Escape')closeWho();});
 
-  function sendForm(e){e.preventDefault();const v=id=>document.getElementById(id).value.trim();const s=encodeURIComponent('New enquiry from '+v('fn')+' '+v('ln'));const b=encodeURIComponent('Name: '+v('fn')+' '+v('ln')+'\nEmail: '+v('em')+'\nPhone: '+(v('ph')||'-')+'\n\n'+v('msg'));document.getElementById('sent').style.display='block';window.location.href='mailto:Saidaaden@supportiveguardians.com?subject='+s+'&body='+b;return false;}
+  async function sendForm(e){e.preventDefault();const v=id=>document.getElementById(id).value.trim();const sent=document.getElementById('sent');const form=e.target;const btn=form.querySelector('button[type="submit"]');const orig=btn.innerHTML;const data={name:v('fn')+' '+v('ln'),email:v('em'),phone:v('ph')||'-',message:v('msg')};btn.disabled=true;btn.textContent='Sending...';try{const r=await fetch('https://formspree.io/f/xwvjybdn',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});if(r.ok){form.reset();sent.textContent='Thank you — your message has been sent. I will be in touch the same working day.';sent.style.display='block';btn.style.display='none';}else{throw new Error('fail');}}catch(err){sent.textContent='Sorry, something went wrong. Please email Saidaaden@supportiveguardians.com directly.';sent.style.display='block';btn.disabled=false;btn.innerHTML=orig;}return false;}
 </script>
 </body>
 </html>
