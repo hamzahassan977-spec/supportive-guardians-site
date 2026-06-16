@@ -44,25 +44,25 @@
   .btn-light:hover{transform:translateY(-2px);box-shadow:0 16px 30px -16px rgba(27,46,36,.5)}
 
   /* header */
-  header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .4s,box-shadow .4s}
-  header.solid{background:rgba(246,239,226,.82);backdrop-filter:blur(14px) saturate(1.05);box-shadow:0 10px 30px -22px rgba(27,46,36,.55),0 1px 0 var(--line)}
+  header{position:fixed;inset:0 0 auto 0;z-index:100;background:var(--forest);transition:background .4s,box-shadow .4s}
+  header.solid{background:#21382C;box-shadow:0 12px 30px -20px rgba(0,0,0,.55)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .38s cubic-bezier(.2,.7,.3,1)}
   header.solid .nav{height:64px}
   .brand{transition:font-size .38s cubic-bezier(.2,.7,.3,1)}
   .brand svg{transition:transform .38s cubic-bezier(.2,.7,.3,1)}
   header.solid .brand{font-size:1.04rem}
-  header.solid .brand svg{transform:scale(.88)}
-  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:500;font-size:1.12rem;color:var(--forest)}
+  header.solid .brand svg{transform:scale(.9)}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:500;font-size:1.12rem;color:#fff}
   .brand svg{width:36px;height:36px;flex:none}
   .links{display:flex;align-items:center;gap:24px;list-style:none}
-  .links a{font-size:.95rem;font-weight:500;color:var(--ink);opacity:.85;transition:opacity .2s}
-  .links a:hover{opacity:1;color:var(--green-deep)}
+  .links a{font-size:.95rem;font-weight:500;color:#fff;opacity:.82;transition:opacity .2s}
+  .links a:hover{opacity:1;color:var(--mint)}
   .nav-r{display:flex;align-items:center;gap:12px}
-  .login{font-size:.92rem;font-weight:600;color:var(--forest);display:inline-flex;align-items:center;gap:7px}
+  .login{font-size:.92rem;font-weight:600;color:#fff;display:inline-flex;align-items:center;gap:7px}
   .login:hover{color:var(--green-deep)}
-  .login-m{display:none;width:42px;height:42px;border-radius:50%;border:1px solid rgba(44,74,59,.22);align-items:center;justify-content:center;color:var(--forest)}
+  .login-m{display:none;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.45);align-items:center;justify-content:center;color:#fff}
   .login-m:hover{border-color:var(--forest)}
-  .burger{display:none;background:none;border:none;color:var(--forest);cursor:pointer}
+  .burger{display:none;background:none;border:none;color:#fff;cursor:pointer}
   .mobile{display:none;position:fixed;top:76px;left:0;right:0;z-index:99;flex-direction:column;
     background:rgba(246,239,226,.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
     padding:14px 28px 24px;box-shadow:0 24px 44px -26px rgba(27,46,36,.45)}
@@ -255,7 +255,7 @@
 <header id="top">
   <div class="wrap nav">
     <a href="#top" class="brand" aria-label="Supportive Guardians home">
-      <svg viewBox="0 0 40 40" fill="none"><path d="M6 8h22a6 6 0 0 1 6 6v11a6 6 0 0 1-6 6H16l-7 5v-5H6a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4Z" fill="#2C4A3B"/><path d="M20.4 14.2c1.5-2 4.6-1.8 5.7.3 1 1.9.2 3.9-1.4 5.5-1 1-2.5 2.2-4.3 3.6-1.8-1.4-3.3-2.6-4.3-3.6-1.6-1.6-2.4-3.6-1.4-5.5 1.1-2.1 4.2-2.3 5.7-.3Z" fill="#2E9E68"/></svg>
+      <svg viewBox="0 0 40 40" fill="none"><path d="M20 5c8 0 14.5 5.6 14.5 12.5S28 30 20 30c-1.6 0-3.1-.2-4.5-.7L8 32l2-5.8C7.7 24 6 20.9 6 17.5 6 10.6 12 5 20 5Z" fill="#fff"/><path d="M20 25s-5.6-3.4-5.6-7.1c0-1.9 1.5-3.2 3.2-3.2 1.2 0 1.9.6 2.4 1.5.5-.9 1.2-1.5 2.4-1.5 1.7 0 3.2 1.3 3.2 3.2C25.6 21.6 20 25 20 25Z" fill="#2E9E68"/></svg>
       Supportive Guardians
     </a>
     <ul class="links">
@@ -267,7 +267,7 @@
     <div class="nav-r">
       <a href="https://supportive-guardians.vercel.app" class="login"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Client login</a>
       <a href="https://supportive-guardians.vercel.app" class="login-m" aria-label="Client login"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></a>
-      <a href="#contact" class="btn btn-primary">Book a session <span class="arr">→</span></a>
+      <a href="#contact" class="btn btn-light">Book a session <span class="arr">→</span></a>
     </div>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
@@ -422,7 +422,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <div class="brand"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><path d="M6 8h22a6 6 0 0 1 6 6v11a6 6 0 0 1-6 6H16l-7 5v-5H6a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4Z" fill="#fff"/><path d="M20.4 14.2c1.5-2 4.6-1.8 5.7.3 1 1.9.2 3.9-1.4 5.5-1 1-2.5 2.2-4.3 3.6-1.8-1.4-3.3-2.6-4.3-3.6-1.6-1.6-2.4-3.6-1.4-5.5 1.1-2.1 4.2-2.3 5.7-.3Z" fill="#2E9E68"/></svg> Supportive Guardians</div>
+        <div class="brand"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><path d="M20 5c8 0 14.5 5.6 14.5 12.5S28 30 20 30c-1.6 0-3.1-.2-4.5-.7L8 32l2-5.8C7.7 24 6 20.9 6 17.5 6 10.6 12 5 20 5Z" fill="#fff"/><path d="M20 25s-5.6-3.4-5.6-7.1c0-1.9 1.5-3.2 3.2-3.2 1.2 0 1.9.6 2.4 1.5.5-.9 1.2-1.5 2.4-1.5 1.7 0 3.2 1.3 3.2 3.2C25.6 21.6 20 25 20 25Z" fill="#2E9E68"/></svg> Supportive Guardians</div>
         <p class="lead2">A confidential space to talk, for individuals, couples and families across the UK.</p>
       </div>
       <div class="fcol"><h4>Support</h4><a href="#who">Who we help</a><a href="#support">Our support</a><a href="#pricing">Pricing</a><a href="#how">How it works</a></div>
