@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your intake — Supportive Guardians</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 4c8.6 0 15.5 5.8 15.5 13S28.6 30 20 30c-1.7 0-3.3-.2-4.8-.7L7 33l2.1-6C7 24.3 4.5 21 4.5 17 4.5 9.8 11.4 4 20 4Z' fill='%232E9E68'/%3E%3Cpath d='M20 25.5s-6.2-3.8-6.2-7.8c0-2.1 1.7-3.5 3.5-3.5 1.3 0 2.1.7 2.7 1.6.6-.9 1.4-1.6 2.7-1.6 1.8 0 3.5 1.4 3.5 3.5 0 4-6.2 7.8-6.2 7.8Z' fill='%23FFFFFF'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6EFE2;--surface:#FFFFFF;--ink:#1B2240;--ink-soft:#5E6B5E;
+    --coral:#2E9E68;--coral-deep:#23764E;--sun:#C2693F;--aqua:#2E9E68;--aqua-deep:#23764E;
+    --wash-peach:#E7F1EA;--wash-butter:#E7F1EA;--wash-sky:#E7F1EA;--line:#E4D8C2;
+    --shadow:0 18px 50px -24px rgba(31,36,56,.30);--shadow-sm:0 8px 24px -16px rgba(31,36,56,.35);
+    --radius:18px;--radius-lg:28px;--serif:'Fraunces',Georgia,serif;--sans:'Hanken Grotesk',system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+  em{font-family:var(--serif);font-style:italic;font-weight:500}
+  a{color:var(--coral-deep)}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  .head{background:linear-gradient(160deg,#E7F1EA,#F6EFE2);padding:42px 0 30px;text-align:center}
+  .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:500;font-size:1.1rem;color:var(--ink);margin-bottom:24px}
+  .brand svg{width:38px;height:38px}
+  .eyebrow{font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-deep);display:inline-flex;align-items:center;gap:9px;margin-bottom:14px}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--coral);border-radius:2px}
+  .head h1{font-size:clamp(1.9rem,5.4vw,2.7rem);margin-bottom:.35em}
+  .head p{color:var(--ink-soft);max-width:44ch;margin:0 auto;font-size:1.06rem}
+  .body{padding:30px 0 70px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm);margin-bottom:18px}
+  .sec-eye{font-size:.74rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--aqua-deep);display:flex;align-items:center;gap:9px;margin-bottom:7px}
+  .sec-eye::before{content:"";width:18px;height:2px;background:var(--aqua);border-radius:2px}
+  .card h2{font-size:1.32rem;margin-bottom:20px}
+  label{display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:7px}
+  input,textarea,select{width:100%;font-family:var(--sans);font-size:.97rem;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);transition:.2s}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--coral);background:#fff;box-shadow:0 0 0 4px rgba(46,158,104,.13)}
+  textarea{resize:vertical;min-height:96px}
+  .field{margin-bottom:17px}.field:last-child{margin-bottom:0}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:520px){.row{grid-template-columns:1fr}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:1rem;padding:15px 26px;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:transform .22s,box-shadow .22s,opacity .2s}
+  .btn-primary{background:var(--coral);color:#fff;width:100%;box-shadow:var(--shadow-sm)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(46,158,104,.7)}
+  .btn-primary:disabled{opacity:.6;transform:none;cursor:default}
+  .check{display:flex;gap:11px;align-items:flex-start;margin-bottom:13px;font-size:.92rem;color:var(--ink)}
+  .check input{width:auto;margin-top:4px;flex:none;accent-color:var(--coral)}
+  .crisis{background:#E7F1EA;border:1px solid #CFE0D2;border-radius:14px;padding:16px 18px;font-size:.88rem;color:#4F5A52;margin:4px 0 18px}
+  .crisis b{display:block;margin-bottom:4px;color:var(--ink)}
+  .note{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:12px}
+  .msg{padding:13px 15px;border-radius:11px;font-size:.9rem;margin-bottom:16px;display:none}
+  .msg.err{background:#FDECEC;color:#B23B3B;display:block}
+  .hide{display:none!important}
+  .done{text-align:center;padding:26px}
+  .done .tick{width:66px;height:66px;border-radius:50%;background:var(--wash-sky);color:var(--aqua-deep);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="wrap">
+      <div class="brand"><svg viewBox="0 0 48 48" fill="none"><path d="M9 6h30a5 5 0 0 1 5 5v20a5 5 0 0 1-5 5H20l-8 7 1-7H9a5 5 0 0 1-5-5V11a5 5 0 0 1 5-5Z" fill="#fff" stroke="#1B2240" stroke-width="2.4"/><path d="M24 32s-9-5.6-9-11c0-3 2.4-5 5-5 1.9 0 3.4 1 4 2.4.6-1.4 2.1-2.4 4-2.4 2.6 0 5 2 5 5 0 5.4-9 11-9 11Z" fill="#2E9E68"/><path d="M18.4 18.6c.9-1 2.2-1 3 0M17.8 22c.9-1 2.4-1 3.3 0" stroke="#1B2240" stroke-width="1.5" stroke-linecap="round"/></svg> Supportive Guardians</div>
+      <div class="eyebrow">Before we begin</div>
+      <h1>A few things to help me <em>support you well.</em></h1>
+      <p>This short, confidential form helps me understand how best to help before our first session. Share only what you're comfortable with.</p>
+    </div>
+  </div>
+
+  <div class="wrap body">
+    <div class="card hide" id="loginCard">
+      <div class="sec-eye">Sign in</div><h2>Sign in to continue</h2>
+      <div class="msg" id="loginMsg"></div>
+      <div class="field"><label for="li-email">Email</label><input id="li-email" type="email" autocomplete="email"></div>
+      <div class="field"><label for="li-pw">Password</label><input id="li-pw" type="password" autocomplete="current-password"></div>
+      <button class="btn btn-primary" id="loginBtn">Sign in</button>
+      <p class="note">Use the same details as your client portal.</p>
+    </div>
+
+    <div id="formWrap" class="hide">
+      <div class="msg" id="formMsg"></div>
+      <div class="card">
+        <div class="sec-eye">About you</div><h2>Your details</h2>
+        <div class="field"><label for="full_name">Full name</label><input id="full_name" type="text"></div>
+        <div class="row"><div class="field"><label for="dob">Date of birth</label><input id="dob" type="date"></div><div class="field"><label for="phone">Phone</label><input id="phone" type="tel"></div></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email"></div>
+      </div>
+      <div class="card">
+        <div class="sec-eye">In case of need</div><h2>GP &amp; emergency contact</h2>
+        <div class="row"><div class="field"><label for="gp_name">GP name</label><input id="gp_name" type="text"></div><div class="field"><label for="gp_surgery">GP surgery</label><input id="gp_surgery" type="text"></div></div>
+        <div class="row"><div class="field"><label for="em_name">Emergency contact</label><input id="em_name" type="text"></div><div class="field"><label for="em_phone">Their phone</label><input id="em_phone" type="tel"></div></div>
+        <div class="field"><label for="em_rel">Their relationship to you</label>
+          <select id="em_rel"><option value="">Please choose…</option><option>Partner / spouse</option><option>Parent</option><option>Sibling</option><option>Child</option><option>Friend</option><option>Other family</option><option>Other</option></select></div>
+      </div>
+      <div class="card">
+        <div class="sec-eye">What brings you here</div><h2>How I can help</h2>
+        <div class="field"><label for="concerns">What would you like support with?</label><textarea id="concerns" placeholder="Share as much or as little as you like…"></textarea></div>
+        <div class="field"><label for="duration">How long has this been going on?</label>
+          <select id="duration"><option value="">Please choose…</option><option>Less than a month</option><option>1 to 3 months</option><option>3 to 6 months</option><option>6 to 12 months</option><option>Over a year</option><option>I'm not sure</option></select></div>
+        <div class="field"><label for="prev_yn">Have you had counselling or therapy before?</label>
+          <select id="prev_yn"><option value="">Please choose…</option><option>No</option><option>Yes</option></select></div>
+        <div class="field"><label for="prev">If yes, what helped? (optional)</label><textarea id="prev"></textarea></div>
+        <div class="field"><label for="meds">Any medication? (optional)</label><input id="meds" type="text"></div>
+      </div>
+      <div class="card">
+        <div class="sec-eye">A few important questions</div><h2>Your safety</h2>
+        <div class="field"><label for="risk">Are you currently having thoughts of harming yourself or ending your life?</label>
+          <select id="risk"><option value="">Please choose…</option><option value="no">No</option><option value="sometimes">Sometimes / occasionally</option><option value="yes">Yes</option></select></div>
+        <div class="crisis"><b>If you need urgent help right now</b>This form isn't monitored in real time. If you're in crisis, call <strong>999</strong>, or Samaritans free any time on <strong>116 123</strong>. You can also text <strong>SHOUT to 85258</strong>.</div>
+        <div class="field"><label for="risk_notes">Anything you'd like me to know? (optional)</label><textarea id="risk_notes"></textarea></div>
+      </div>
+      <div class="card">
+        <div class="sec-eye">Consent</div><h2>Before you submit</h2>
+        <label class="check"><input type="checkbox" id="c_treat"> I consent to beginning talking support / CBT sessions with Supportive Guardians.</label>
+        <label class="check"><input type="checkbox" id="c_conf"> I understand what I share is confidential, except where there is a serious risk to my safety or someone else's.</label>
+        <label class="check"><input type="checkbox" id="c_data"> I consent to my information being stored securely and used to support my care, per the <a href="#" target="_blank">privacy policy</a>.</label>
+        <button class="btn btn-primary" id="submitBtn" style="margin-top:14px">Submit my intake form</button>
+        <p class="note">Encrypted · only seen by your practitioner.</p>
+      </div>
+    </div>
+
+    <div class="card hide" id="doneCard"><div class="done"><div class="tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></div><h2>Thank you</h2><p style="color:var(--ink-soft);max-width:44ch;margin:10px auto 0">Your intake form has been received securely. I'll review it before our first session.</p></div></div>
+    <div class="msg err hide" id="loadErr"></div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL='https://xtlwakxdczhcggtuozwo.supabase.co';
+  const SUPABASE_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh0bHdha3hkY3poY2dndHVvendvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzNDkzODksImV4cCI6MjA5NjkyNTM4OX0.5UkBWw0vbtl4w-LASJkD0libRk6oVX_-eRa6B50edyg';
+  const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON);
+  const $=id=>document.getElementById(id), show=(el,on=true)=>el.classList.toggle('hide',!on);
+  let uid=null;
+  async function init(){ show($('loginCard'),false); show($('formWrap'),true); }
+  $('submitBtn').addEventListener('click',async()=>{const m=$('formMsg');m.className='msg';if(!$('full_name').value.trim()){m.className='msg err';m.textContent='Please add your name.';window.scrollTo({top:0,behavior:'smooth'});return;}if(!$('email').value.trim()){m.className='msg err';m.textContent='Please add your email so I can get back to you.';window.scrollTo({top:0,behavior:'smooth'});return;}if(!$('concerns').value.trim()){m.className='msg err';m.textContent='Please tell me a little about what you\u2019d like support with.';window.scrollTo({top:0,behavior:'smooth'});return;}if(!$('c_treat').checked||!$('c_conf').checked||!$('c_data').checked){m.className='msg err';m.textContent='Please tick the three consent boxes to continue.';window.scrollTo({top:0,behavior:'smooth'});return;}$('submitBtn').disabled=true;$('submitBtn').textContent='Submitting…';const pYn=$('prev_yn').value,pD=$('prev').value.trim();const prevSupport=pYn?(pYn==='Yes'?('Yes'+(pD?(': '+pD):'')):'No'):(pD||null);const row={full_name:$('full_name').value.trim()||null,date_of_birth:$('dob').value||null,phone:$('phone').value.trim()||null,email:$('email').value.trim()||null,gp_name:$('gp_name').value.trim()||null,gp_surgery:$('gp_surgery').value.trim()||null,emergency_name:$('em_name').value.trim()||null,emergency_phone:$('em_phone').value.trim()||null,emergency_rel:$('em_rel').value.trim()||null,main_concerns:$('concerns').value.trim()||null,duration:$('duration').value.trim()||null,prev_support:prevSupport,medication:$('meds').value.trim()||null,risk_self_harm:$('risk').value||null,risk_notes:$('risk_notes').value.trim()||null,consent_treatment:$('c_treat').checked,consent_confid:$('c_conf').checked,consent_data:$('c_data').checked};const{error}=await sb.from('intake_forms').insert(row);if(error){$('submitBtn').disabled=false;$('submitBtn').textContent='Submit my intake form';m.className='msg err';m.textContent='Sorry, something went wrong saving your form. Please try again.';return;}try{fetch('https://formspree.io/f/xwvjybdn',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'New client intake submitted',name:row.full_name||'A client',email:row.email||'-',message:'A new intake form has been submitted. Please log in to view the full details securely.'})});}catch(e){}show($('formWrap'),false);show($('doneCard'),true);window.scrollTo({top:0,behavior:'smooth'});});
+  init().catch(()=>{$('loadErr').classList.remove('hide');$('loadErr').textContent='Could not connect. Please refresh and try again.';});
+</script>
+</body></html>
