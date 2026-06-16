@@ -45,8 +45,13 @@
 
   /* header */
   header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .4s,box-shadow .4s}
-  header.solid{background:rgba(246,239,226,.86);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  header.solid{background:rgba(246,239,226,.82);backdrop-filter:blur(14px) saturate(1.05);box-shadow:0 10px 30px -22px rgba(27,46,36,.55),0 1px 0 var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .38s cubic-bezier(.2,.7,.3,1)}
+  header.solid .nav{height:64px}
+  .brand{transition:font-size .38s cubic-bezier(.2,.7,.3,1)}
+  .brand svg{transition:transform .38s cubic-bezier(.2,.7,.3,1)}
+  header.solid .brand{font-size:1.04rem}
+  header.solid .brand svg{transform:scale(.88)}
   .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:500;font-size:1.12rem;color:var(--forest)}
   .brand svg{width:36px;height:36px;flex:none}
   .links{display:flex;align-items:center;gap:24px;list-style:none}
